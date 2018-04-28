@@ -1,0 +1,8 @@
+[Unit]
+Description=Ejecuta el backup cada dia a media noche
+
+[Timer]
+OnCalendar=*-*-* 23:30:00
+
+[Install]
+WantedBy=basic.target

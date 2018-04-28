@@ -1,0 +1,9 @@
+[Unit]
+Description=Ejecutar respaldo del servidor mariadb
+Wants=down.timer
+
+[Service]
+ExecStart=/miruta/respaldos/backup.sh
+
+[Install]
+WantedBy=down.target

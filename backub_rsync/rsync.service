@@ -1,0 +1,9 @@
+[Unit]
+Description=Sincronizar con Rsync
+Wants=rsync.timer
+
+[Service]
+ExecStart=/usr/bin/rsync -e ssh -av /miruta/respaldos/html/ usuario@host_nas::miruta_nas/respaldo/
+
+[Install]
+WantedBy=rsync.target
